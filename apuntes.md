@@ -72,3 +72,14 @@ SELECT columna1, columna2,columna3 AS departamento ...
 FROM nombre_tabla
 WHERE nombre_columna BETWEEN valor1 AND valor2;
   ```
+###  COMPARADORES
+| Símbolo | Significado      |
+| ------- | ----------------:|
+| =       | Igual a          | 
+| >       | Mayor que        | 
+| <       | Menor que        | 
+| >=      | Mayor o igual que|
+| <=      | Menor o igual que|
+| <>      | No es igual a    |
+
+###  LIKE

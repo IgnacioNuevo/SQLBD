@@ -106,3 +106,17 @@ SELECT columna1, columna2,columna3 AS departamento ...
 FROM nombre_tabla
 WHERE nombre_columna LIKE patron;
   ```
+###  ROUND 
+Es un operador que permite redondear un valor numérico a la longitud especificada 
+
+#### Sintaxis ROUND
+```sql
+ROUND ( numeric_expression , length )
+```
+#### EJEMPLOS
+| Ejemplos          |   Resultado    |
+| ----------------- | :------------: |
+| ROUND(748.58,  1) |   748.6        | 
+| ROUND(748.58, -1) |   750          | 
+
+###   LENGHT

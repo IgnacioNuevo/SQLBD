@@ -53,3 +53,22 @@ WHERE NOT condición;
 ```
 
 ###  IN
+* El operador **IN** permite especificar múltiples valores en un predicado.
+* El **IN** es equivalente a poner varios valores entre operadores **OR**
+
+#### Sintaxis IN
+```sql
+SELECT columna1, columna2,columna3 AS departamento ...
+FROM nombre_tabla
+WHERE nombre_columna 
+  IN(valor1,valor2,...);
+```
+###  BETWEEN
+* El operador **BETWEEN** permite especificar rangos de valores (puedes ser números, texto o datos).
+* Si le ponemos un **NOT** delante excluiría el rango es decir mostraría todos los valores que no estuvieran dentro del rango del **BETWEEN**
+#### Sintaxis BETWEEN
+```sql
+SELECT columna1, columna2,columna3 AS departamento ...
+FROM nombre_tabla
+WHERE nombre_columna BETWEEN valor1 AND valor2;
+  ```

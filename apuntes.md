@@ -97,8 +97,8 @@ El operador **LIKE** se puede utilizar en la clausula **WHERE** y permite buscar
 * A diferencia del **=** el cual compara con una cadena exactamente igual, el **LIKE** permite incluir comodines.
     
     Permite los comodines:
-    *%
-    *_
+    * %
+    * _
 
 #### Sintaxis LIKE
 ```sql

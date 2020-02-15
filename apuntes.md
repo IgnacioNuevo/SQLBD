@@ -111,7 +111,7 @@ Es un operador que permite redondear un valor numérico a la longitud especifica
 
 #### Sintaxis ROUND
 ```sql
-ROUND ( numeric_expression , length )
+ROUND ( Expresion_Numerica , Nº_De_redondeo )
 ```
 #### EJEMPLOS
 | Ejemplos          |   Resultado    |

@@ -82,4 +82,15 @@ WHERE nombre_columna BETWEEN valor1 AND valor2;
 | <=      | Menor o igual que|
 | <>      | No es igual a    |
 
+### COMODINES
+
+| Símbolo | Significado                                                  |
+| ------- | ------------------------------------------------------------ |
+| %       | Sustituye 0 o más caracteres                                 | 
+| _       | Sustituye un único caracter                                  | 
+| []      | Permite sustituir por los caracteres dentro de los corchetes | 
+| -       | Permite un rango de caracteres dentro de los corchetes       |
+| ^       | Excluye los caracteres dentro de los corchetes               |
+
 ###  LIKE
+

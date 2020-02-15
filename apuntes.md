@@ -74,7 +74,7 @@ WHERE nombre_columna BETWEEN valor1 AND valor2;
   ```
 ###  COMPARADORES
 | Símbolo | Significado      |
-| ------- | ----------------:|
+| ------- | :---------------:|
 | =       | Igual a          | 
 | >       | Mayor que        | 
 | <       | Menor que        | 

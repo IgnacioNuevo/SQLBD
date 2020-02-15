@@ -85,7 +85,7 @@ WHERE nombre_columna BETWEEN valor1 AND valor2;
 ### COMODINES
 
 | Símbolo | Significado                                                  |
-| ------- | ------------------------------------------------------------ |
+| :-----: | ------------------------------------------------------------ |
 | %       | Sustituye 0 o más caracteres                                 | 
 | _       | Sustituye un único caracter                                  | 
 | []      | Permite sustituir por los caracteres dentro de los corchetes | 

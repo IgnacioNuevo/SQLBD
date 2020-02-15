@@ -93,4 +93,16 @@ WHERE nombre_columna BETWEEN valor1 AND valor2;
 | ^       | Excluye los caracteres dentro de los corchetes               |
 
 ###  LIKE
+El operador **LIKE** se puede utilizar en la clausula **WHERE** y permite buscar un patrón.
+* A diferencia del **=** el cual compara con una cadena exactamente igual, el **LIKE** permite incluir comodines.
+    
+    Permite los comodines:
+    *%
+    *_
 
+#### Sintaxis LIKE
+```sql
+SELECT columna1, columna2,columna3 AS departamento ...
+FROM nombre_tabla
+WHERE nombre_columna LIKE patron;
+  ```

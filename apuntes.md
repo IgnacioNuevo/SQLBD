@@ -6,6 +6,7 @@
 
 El SELECT nos permite seleccionar las columnas que queremos mostrar en la consulta
 
-<code>
+```sql
 SELECT column1, column2, ...
-FROM table_name;</code>
+FROM table_name;
+```

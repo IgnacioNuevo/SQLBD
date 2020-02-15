@@ -120,3 +120,23 @@ ROUND ( Expresion_Numerica , Nº_De_redondeo )
 | ROUND(748.58, -1) |   750          | 
 
 ###   LENGHT
+Devuelve el numero de caracteres de una cadena
+
+#### Sintaxis ROUND
+```sql
+LENGHT(cadena)
+```
+###   LEFT y RIGHT
+Devuelven un número concreto de caracteres de una cadena.
+* **LEFT** empieza a contar por la izquierda
+* **RIGHT** empieza a contar por la derecha
+
+#### Sintaxis
+```sql
+LEFT(cadena)
+```
+
+```sql
+RIGHT(cadena)
+```
+###   ORDER BY

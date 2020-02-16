@@ -131,7 +131,7 @@ Devuelven un número concreto de caracteres de una cadena.
 * **LEFT** empieza a contar por la izquierda
 * **RIGHT** empieza a contar por la derecha
 
-#### Sintaxis
+#### Sintaxis LEFT y RIGHT
 ```sql
 LEFT(cadena)
 ```
@@ -140,3 +140,25 @@ LEFT(cadena)
 RIGHT(cadena)
 ```
 ###   ORDER BY
+Con el **ORDER BY** podemos filtrar por el orden de las tuplas.
+* Se puede ordenar por orden ASCENDENTE (**ASC**) o DESCENDENTE (**DESC**)
+* Por defecto ordenará por orden ASCENDENTE.
+
+#### Sintaxis ORDER BY
+```sql
+SELECT columna1, columna2,...
+FROM nombre_tabla
+ORDER BY columna1, columna2, ... ASC|DESC;
+```
+###   SUBCONSULTAS O CONSULTAS ANIDADAS
+Son consultas completas que podemos poner por ejemplo dentro de una clausula **WHERE** y nos permiten hacer dos tablas independientes y comparar por tanto dos tuplas.
+
+####  EJEMPLO SUBCONSULTAS
+```sql
+SELECT name 
+FROM world
+  WHERE population > 
+     (SELECT population 
+      FROM world
+      WHERE name='Russia');
+```

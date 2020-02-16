@@ -3,6 +3,7 @@
 
 - [Apuntes bases de datos](#Apuntes-bases-de-datos)
   - [Sentencias SQL/DQL](#Sentencias-SQLDQL)
+    - [SINTAXIS](#SINTAXIS)
     - [SELECT Y FROM](#SELECT-Y-FROM)
     - [WHERE](#WHERE)
     - [OPERADORES AND, OR y NOT](#OPERADORES-AND-OR-y-NOT)
@@ -31,6 +32,14 @@
     - [ORDEN DE EJECUCIÓN DE LAS CONSULTAS](#ORDEN-DE-EJECUCIÓN-DE-LAS-CONSULTAS)
 
 ## Sentencias SQL/DQL
+
+### SINTAXIS
+1. Siempre terminaremos una consulta con ;
+2. Las cadenas deben ir siempre entre comillas simples ''.
+3. Los valores numéricos no van entre comillas.
+4. Por convenio las clausulas se ponen en mayúsculas.
+5. Para hacer comentarios en una línea usaremos -- antes del comentario.
+6. Para hacer los comentarios en varias líneas usaremos /* para abrir el comentario y  * /  para cerrarlo.
 
 ### SELECT y FROM
 

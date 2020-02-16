@@ -1,6 +1,6 @@
 
 - [Apuntes bases de datos](#Apuntes-bases-de-datos)
-  - [Sentencias SQL/DQL](#Sentencias-SQL/DQL)
+  - [Sentencias SQL/DQL](#Sentencias-SQLDQL)
     - [SELECT Y FROM](#SELECT-Y-FROM)
     - [WHERE](#4)
     - [OPERADORES AND, OR y NOT](#5)

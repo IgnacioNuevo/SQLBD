@@ -1,3 +1,32 @@
+
+- [Apuntes bases de datos](#Apuntes-bases-de-datos)
+  - [Sentencias SQL/DQL](#Sentencias-SQL/DQL)
+    - [SELECT Y FROM](#SELECT-FROM)
+    - [WHERE](#4)
+    - [OPERADORES AND, OR y NOT](#5)
+    - [IN](#6)
+    - [BETWEEN](#7)
+    - [COMPARADORES](#8)
+    - [COMODINES](#9)
+    - [LIKE](#10)
+    - [ROUND](#11)
+    - [LEGHNT](#12)
+    - [LEFT y RIGHT](#13)
+    - [ORDER BY](#14)
+    - [SUBCONSULTAS O CONSULTAS ANIDADAS](#15)
+    - [CONCAT](#16)
+    - [ALL](#17)
+    - [FUNCIONES SUM, COUNT Y AVG](#18)
+    - [DISTINCT](#19)
+    - [GROUP BY](#20)
+    - [HAVING](#21)
+    - [LEFT y RIGHT JOIN](#22)
+    - [NULL](#23)
+    - [OTRAS FUNCIONES](#24)
+        - [REPLACE](#25)
+        - [COALESCE](#26)
+        - [LIMIT](#27)
+    - [ORDEN DE EJECUCIÓN DE LAS CONSULTAS](#28)
 # Apuntes bases de datos
 
 ## Sentencias SQL/DQL
@@ -350,7 +379,7 @@ El **LIMIT** nos permite limitar los campos, de forma que solo nos muestre un n�
 ![COALESCE](img/CapturaBD8.PNG)
 
 
-###   ORDER DE EJECUCIÓN DE LAS CONSULTAS
+###   ORDEN DE EJECUCIÓN DE LAS CONSULTAS
 
 1. Primero se ejecuta el **FROM** es decir de que tablas recoge los datos
 2. A continuación filtra cada una de las tuplas con el **WHERE**

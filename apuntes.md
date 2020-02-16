@@ -322,3 +322,18 @@ WHERE nombre_columna IS NULL;
 ![NULL](img/CapturaBD6.PNG)
 
 
+###   OTRAS FUNCIONES
+
+####  REPLACE
+Reemplaza el valor de una cadena especificado por otro valor de cadena.
+
+#####  Sintaxis REPLACE
+**REPLACE ( cadena , lo que se quiere reemplazar , reemplazo )**
+
+####  COALESCE
+Evalúa los argumentos en orden y devuelve el primer valor que no sea **NULL**.
+#####  Sintaxis COALESCE
+**COALESCE ( expresión [ ,...n ] )**
+#####   EJEMPLO COALESCE
+![COALESCE](img/CapturaBD7.PNG)
+

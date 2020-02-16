@@ -153,6 +153,8 @@ ORDER BY columna1, columna2, ... ASC|DESC;
 ###   SUBCONSULTAS O CONSULTAS ANIDADAS
 Son consultas completas que podemos poner por ejemplo dentro de una clausula **WHERE** y nos permiten hacer dos tablas independientes y comparar por tanto dos tuplas.
 
+* Las subconsultas son independientes de la consulta por tanto no hace falta poner un alias a las columnas o tablas (Lo que pasa en las Vegas se queda en las Vegas 🎰♠♣♥♦🎰 )
+
 ####  EJEMPLO SUBCONSULTAS
 ```sql
 SELECT name 
@@ -162,3 +164,27 @@ FROM world
       FROM world
       WHERE name='Russia');
 ```
+###   CONCAT
+Permite la concatenación o combinación de dos o más valores o cadenas.
+* Se puede utilizar en el **SELECT** o dentro de un predicado.
+
+#### Sintaxis CONCAT
+```sql
+CONCAT ( cadena_valor1, cadena_valor2 [, cadena_valorN ] ) ;
+```
+####  EJEMPLOS CONCAT
+```sql
+SELECT CONCAT ( 'Feliz ', 'Cumpleaños ', 11, '/', '25' ) AS Result;
+```
+    El resultado sería una columna con nombre Feliz Cumpleaños 11/25
+
+```sql
+SELECT name, CONCAT(ROUND(population/(SELECT population
+                               FROM world
+                               WHERE name ='Germany')*100,0),'%')
+FROM world;
+```
+    En este caso la consulta concatena el **%** al porcentaje de población de cada país respecto a la población de \"Alemania\".
+    Es decir dividimos la población de cada país entre la de alemania y la multiplicamos por 100 para saber el porcentaje, lo ponemos dentro de un **ROUND** para redondear sin decimales y todo el conjunto dentro de un **CONCAT** para añadirle el porcentaje a continuación del resultado.
+
+###   ALL

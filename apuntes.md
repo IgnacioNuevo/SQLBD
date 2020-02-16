@@ -164,6 +164,7 @@ FROM world
       FROM world
       WHERE name='Russia');
 ```
+* También es muy importante poner la subconsulta después del comparador poque si lo ponemos antes del comparador la consulta no funcionará.
 ###   CONCAT
 Permite la concatenación o combinación de dos o más valores o cadenas.
 * Se puede utilizar en el **SELECT** o dentro de un predicado.
@@ -281,11 +282,29 @@ ON(nombre_tabla1.nombre_columna =nombre_tabla2.nombre_columna)
 WHERE condición;
 ```
 * En el **ON** se pueden incluir predicados, como si fuera en un **WHERE**, por tanto la relación de dos tablas que ponemos en un **ON** también se podría poner en el **WHERE** sin embargo es más cómodo y fácil de entender poniéndolo en el **ON**.
+* Se puede hacer un **INNER JOIN** de varias tablas diferentes, incluyendo de esta forma la misma tabla también.
+* El **INNER JOIN** elimina nulos.
 
 ####  EJEMPLO INNER JOIN
 ![INNER JOIN](img/CapturaBD3.PNG)
 
-En esta consulta podemos añadir las columnas "stadium" y "mdate" las cuales pertenecen a una tabla diferente gracias al INNER JOIN.
+En esta consulta podemos añadir las columnas "stadium" y "mdate" las cuales pertenecen a una tabla diferente (goal) gracias al INNER JOIN.
 
+###   LEFT y RIGHT JOIN
+* El **LEFT JOIN** muestra todas las tuplas de la izquierda (es decir de la tabla que hacemos el **FROM**) con todas las tuplas de la tabla que hacemos el **JOIN** aunque estas sean nulas.
+*  El **RIGHT JOIN** muestra todas las tuplas de la derecha (es decir de la tabla que hacemos el **JOIN**) con todas las tuplas de la tabla que hacemos el **FROM** aunque estas sean nulas.
+
+#### Sintaxis LEFT Y RIGHT JOIN
+```sql
+SELECT nombre_tabla1.columna1, nombre_tabla2.columna1,...
+FROM nombre_tabla1 RIGHT|LEFT JOIN nombre_tabla2 
+ON(nombre_tabla1.nombre_columna =nombre_tabla2.nombre_columna)
+WHERE condición;
+```
+####  EJEMPLO LEFT JOIN
+![LEFT JOIN](img/CapturaBD4.PNG)
+
+####  EJEMPLO RIGHT JOIN
+![RIGHT JOIN](img/CapturaBD5.PNG)
 
 

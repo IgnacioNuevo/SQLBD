@@ -1,4 +1,6 @@
 
+# Apuntes bases de datos
+
 - [Apuntes bases de datos](#Apuntes-bases-de-datos)
   - [Sentencias SQL/DQL](#Sentencias-SQLDQL)
     - [SELECT Y FROM](#SELECT-Y-FROM)
@@ -27,7 +29,6 @@
         - [COALESCE](#COALESCE)
         - [LIMIT](#LIMIT)
     - [ORDEN DE EJECUCIÓN DE LAS CONSULTAS](#ORDEN-DE-EJECUCIÓN-DE-LAS-CONSULTAS)
-# Apuntes bases de datos
 
 ## Sentencias SQL/DQL
 

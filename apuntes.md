@@ -255,3 +255,4 @@ GROUP BY nombre_columna(s);
 ```
 ####  EJEMPLO GROUP BY
 ![GROUP BY](C:/Users/Ignacio/Desktop/CapturaBD.png)
+

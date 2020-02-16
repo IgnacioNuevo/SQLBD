@@ -348,3 +348,13 @@ El **LIMIT** nos permite limitar los campos, de forma que solo nos muestre un n�
 
 #####   EJEMPLO LIMIT
 ![COALESCE](img/CapturaBD8.PNG)
+
+
+###   ORDER DE EJECUCIÓN DE LAS CONSULTAS
+
+1. Primero se ejecuta el **FROM** es decir de que tablas recoge los datos
+2. A continuación filtra cada una de las tuplas con el **WHERE**
+3. Después se ejecuta el **GROUP BY** en cada una de las tuplas haciendo grupos/subtablas según el criterio especificado.
+4. Se ejecuta el **HAVING** por cada grupo/subtabla.
+5. Se ejecuta el **SELECT** por cada grupo/subtabla.
+6. Finalmente se ejecuta el **ORDER BY** ordenando las tuplas.

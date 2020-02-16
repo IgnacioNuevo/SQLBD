@@ -10,7 +10,7 @@
     - [COMODINES](#9)
     - [LIKE](#10)
     - [ROUND](#11)
-    - [LEGHNT](#12)
+    - [LENGHT](#12)
     - [LEFT y RIGHT](#13)
     - [ORDER BY](#14)
     - [SUBCONSULTAS O CONSULTAS ANIDADAS](#15)

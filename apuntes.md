@@ -176,7 +176,7 @@ CONCAT ( cadena_valor1, cadena_valor2 [, cadena_valorN ] ) ;
 ```sql
 SELECT CONCAT ( 'Feliz ', 'Cumpleaños ', 11, '/', '25' ) AS Result;
 ```
-    El resultado sería una columna con nombre Feliz Cumpleaños 11/25
+  El resultado sería una columna con nombre Feliz Cumpleaños 11/25
 
 ```sql
 SELECT name, CONCAT(ROUND(population/(SELECT population
@@ -184,7 +184,7 @@ SELECT name, CONCAT(ROUND(population/(SELECT population
                                WHERE name ='Germany')*100,0),'%')
 FROM world;
 ```
-    En este caso la consulta concatena el **%** al porcentaje de población de cada país respecto a la población de \"Alemania\".
+  En este caso la consulta concatena el **%** al porcentaje de población de cada país respecto a la población de \"Alemania\".
     Es decir dividimos la población de cada país entre la de alemania y la multiplicamos por 100 para saber el porcentaje, lo ponemos dentro de un **ROUND** para redondear sin decimales y todo el conjunto dentro de un **CONCAT** para añadirle el porcentaje a continuación del resultado.
 
 ###   ALL

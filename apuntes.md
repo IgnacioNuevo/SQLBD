@@ -212,3 +212,46 @@ WHERE gdp >= ALL(SELECT gdp
 * Es Importante fijarse en la diferencia entre el > y >=, porque debido a esto en las consultas no nos mostraría como resultado el país de **'EUROPE'** con mayor gdp debido a que en este caso Alemania no es mayor que Alemania, por tanto sería necesario el comparador >=.
 
 ###   FUNCIONES SUM, COUNT Y AVG
+* La función **SUM**  nos devuelve la suma de los valores numéricos de las tuplas de una columna.
+* La función **COUNT** nos devuelve una tupla con el número de tuplas que tiene una columna.
+* La función **AVG** realiza la media de los valores numéricos de las tuplas de una columna.
+
+#### Sintaxis SUM
+```sql
+SELECT SUM(columna1)
+FROM nombre_tabla
+WHERE condición;
+```
+#### Sintaxis COUNT
+```sql
+SELECT COUNT(columna1)
+FROM nombre_tabla
+WHERE condición;
+```
+#### Sintaxis AVG
+```sql
+SELECT AVG(columna1)
+FROM nombre_tabla
+WHERE condición;
+```
+###   DISTINCT
+El distinct permite evitar duplicados, es decir en caso de haber más de un registro con un mismo valor lo devuelve una sola vez
+
+#### Sintaxis DISTINCT
+```sql
+SELECT DISTINCT columna1, columna2, ...
+FROM nombre_tabla;
+```
+###   GROUP BY
+**GROUP BY** permite agrupar por tuplas. Es decir por si hacemos un **GROUP BY** de una columna agrupará en base a cada tupla de esa columna.
+* Normalmente el **GROUP BY** se utiliza junto a funciones agregadas (SUM,COUNT,AVG, MIN y MAX) lo cual permite filtrar los resultados de una función agrupados en cada una de las tuplas de la columna sobre la que hacemos el **GROUP BY**.
+
+#### Sintaxis GROUP BY
+```sql
+SELECT nombre_columna(s)
+FROM nombre_tabla
+WHERE condición
+GROUP BY nombre_columna(s);
+```
+####  EJEMPLO GROUP BY
+!(C:\Users\Ignacio\Desktop\CapturaBD.png)

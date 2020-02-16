@@ -340,3 +340,11 @@ COALESCE ( expresión [ ,...n ] )
 #####   EJEMPLO COALESCE
 ![COALESCE](img/CapturaBD7.PNG)
 
+Como vemos en la consulta los profesores que tienen no tienen registrado un número de teléfono asignado es decir es **NULL** se les asigna el número que ponemos en el **COALESCE** que podría ser el número del instituto por ejemplo.
+
+####  LIMIT
+El **LIMIT** nos permite limitar los campos, de forma que solo nos muestre un número concreto.
+* Si ponemos por ejemplo "LIMIT 5,10" saltaría los 5 primeros campos y mostraría solo los 10 siguientes
+
+#####   EJEMPLO LIMIT
+![COALESCE](img/CapturaBD8.PNG)

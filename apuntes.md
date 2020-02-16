@@ -122,7 +122,7 @@ ROUND ( Expresion_Numerica , Nº_De_redondeo )
 ###   LENGHT
 Devuelve el numero de caracteres de una cadena
 
-#### Sintaxis ROUND
+#### Sintaxis LENGHT
 ```sql
 LENGHT(cadena)
 ```
@@ -306,5 +306,19 @@ WHERE condición;
 
 ####  EJEMPLO RIGHT JOIN
 ![RIGHT JOIN](img/CapturaBD5.PNG)
+
+###   NULL
+Es importante saber que un valor **NULL** es un campo que se ha dejado en blanco al crear la tabla (sin valor), es decir no tiene valor 0 ni contiene espacios en blanco.
+* Por tanto no se puede comparar un valor nulo con operadores de comparación. (=, <, >, <>, etc)
+#### Sintaxis NULL
+```sql
+SELECT nombre_columna(s)
+FROM nombre_tabla
+WHERE nombre_columna IS NULL;
+```
+* También se utiliza el **IS NOT NULL** para filtrar cuando un registro **no** es nulo.
+
+####  EJEMPLO NULL
+![NULL](img/CapturaBD6.PNG)
 
 

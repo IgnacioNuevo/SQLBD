@@ -270,7 +270,22 @@ HAVING condición;
 ####  EJEMPLO HAVING
 ![HAVING](img/CapturaBD2.PNG)
 
+###   INNER JOIN
+El **INNER JOIN** (sin el INNER funciona igual) permite utilizar columnas y registros de otras tablas.
 
+#### Sintaxis INNER JOIN
+```sql
+SELECT nombre_tabla1.columna1, nombre_tabla2.columna1,...
+FROM nombre_tabla1 INNER JOIN nombre_tabla2 
+ON(nombre_tabla1.nombre_columna =nombre_tabla2.nombre_columna)
+WHERE condición;
+```
+* En el **ON** se pueden incluir predicados, como si fuera en un **WHERE**, por tanto la relación de dos tablas que ponemos en un **ON** también se podría poner en el **WHERE** sin embargo es más cómodo y fácil de entender poniéndolo en el **ON**.
+
+####  EJEMPLO INNER JOIN
+![INNER JOIN](img/CapturaBD3.PNG)
+
+En esta consulta podemos añadir las columnas "stadium" y "mdate" las cuales pertenecen a una tabla diferente gracias al INNER JOIN.
 
 
 

@@ -278,7 +278,7 @@ El **INNER JOIN** (sin el INNER funciona igual) permite utilizar columnas y regi
 ```sql
 SELECT nombre_tabla1.columna1, nombre_tabla2.columna1,...
 FROM nombre_tabla1 INNER JOIN nombre_tabla2 
-ON(nombre_tabla1.nombre_columna =nombre_tabla2.nombre_columna)
+ON(nombre_tabla1.nombre_columna = nombre_tabla2.nombre_columna)
 WHERE condición;
 ```
 * En el **ON** se pueden incluir predicados, como si fuera en un **WHERE**, por tanto la relación de dos tablas que ponemos en un **ON** también se podría poner en el **WHERE** sin embargo es más cómodo y fácil de entender poniéndolo en el **ON**.
@@ -297,8 +297,8 @@ En esta consulta podemos añadir las columnas "stadium" y "mdate" las cuales per
 #### Sintaxis LEFT Y RIGHT JOIN
 ```sql
 SELECT nombre_tabla1.columna1, nombre_tabla2.columna1,...
-FROM nombre_tabla1 RIGHT|LEFT JOIN nombre_tabla2 
-ON(nombre_tabla1.nombre_columna =nombre_tabla2.nombre_columna)
+FROM nombre_tabla1 RIGHT | LEFT JOIN nombre_tabla2 
+ON(nombre_tabla1.nombre_columna = nombre_tabla2.nombre_columna)
 WHERE condición;
 ```
 ####  EJEMPLO LEFT JOIN

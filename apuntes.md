@@ -254,4 +254,4 @@ WHERE condición
 GROUP BY nombre_columna(s);
 ```
 ####  EJEMPLO GROUP BY
-! (C:\Users\Ignacio\Desktop\CapturaBD.png)
+! (C:/Users/Ignacio/Desktop/CapturaBD.png)

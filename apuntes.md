@@ -254,7 +254,22 @@ WHERE condición
 GROUP BY nombre_columna(s);
 ```
 ####  EJEMPLO GROUP BY
-![GROUP BY](CapturaBD.PNG)
+![GROUP BY](img/CapturaBD.PNG)
+
+###   HAVING
+Utilizamos el **HAVING** para hacer predicados con las funciones de agrupamiento, porque no es posible utilizarlas en un **WHERE**.
+
+#### Sintaxis HAVING
+```sql
+SELECT nombre_columna(s)
+FROM nombre_tabla
+WHERE condición
+GROUP BY nombre_columna(s)
+HAVING condición;
+```
+####  EJEMPLO HAVING
+![HAVING]img/CapturaBD2.PNG
+
 
 
 

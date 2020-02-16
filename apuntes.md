@@ -268,7 +268,8 @@ GROUP BY nombre_columna(s)
 HAVING condición;
 ```
 ####  EJEMPLO HAVING
-![HAVING](img/CapturaBD2).PNG
+![HAVING](img/CapturaBD2.PNG)
+
 
 
 

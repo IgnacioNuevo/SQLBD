@@ -188,3 +188,27 @@ FROM world;
     Es decir dividimos la población de cada país entre la de alemania y la multiplicamos por 100 para saber el porcentaje, lo ponemos dentro de un **ROUND** para redondear sin decimales y todo el conjunto dentro de un **CONCAT** para añadirle el porcentaje a continuación del resultado.
 
 ###   ALL
+El operador **ALL** se utiliza en predicados.
+* Permite comparar un registro con todos los registros de una subconsulta con un comparador antes del **ALL**
+
+#### Sintaxis ALL
+```sql
+SELECT nombre_columna(s)
+FROM nombre_tabla
+WHERE nombre_columna comparador ALL
+                                (SELECT nombre_columna
+                                FROM nombre_tabla
+                                WHERE condición);
+```
+####  EJEMPLO ALL
+```sql
+SELECT name
+FROM world
+WHERE gdp >= ALL(SELECT gdp
+                 FROM world
+                 WHERE continent = 'Europe' AND gdp > 0)
+```
+
+* Es Importante fijarse en la diferencia entre el > y >=, porque debido a esto en las consultas no nos mostraría como resultado el país de **'EUROPE'** con mayor gdp debido a que en este caso Alemania no es mayor que Alemania, por tanto sería necesario el comparador >=.
+
+###   FUNCIONES SUM, COUNT Y AVG

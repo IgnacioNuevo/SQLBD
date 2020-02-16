@@ -254,6 +254,7 @@ WHERE condición
 GROUP BY nombre_columna(s);
 ```
 ####  EJEMPLO GROUP BY
-![GROUP BY](https://github.com/IgnacioNuevo/SQLBD/blob/master/CapturaBD.PNG)
+![GROUP BY](CapturaBD.PNG)
+
 
 

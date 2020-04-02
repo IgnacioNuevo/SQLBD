@@ -28,4 +28,21 @@ CREATE TABLE "nombre_tabla"
 ... );
 ```
 
+### ALTER
+La sintaxis de **ALTER** para añadir o eliminar columnas es la siguiente:
+```sql
+ALTER TABLE table_name
+ADD column_name datatype,
+DROP column_name [CASCADE|RESTRICT];
+```
+* Con **ADD** añadimos columnas y con **DROP** las eliminamos, también es necesario indicar el tipo de dato.
+* Al eliminar la columna podemos eliminarla en cascada, es decir eliminara todas las estructuras que dependan de la columna, con restrict  no eliminaremos la columna si existe una o mas estructura que dependan de ella.
+
+También podemos utilizar **ALTER** para modificar una columna:
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+```
 ### DROP
+
+

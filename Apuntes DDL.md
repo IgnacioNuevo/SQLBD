@@ -44,5 +44,22 @@ ALTER TABLE table_name
 ALTER COLUMN column_name datatype;
 ```
 ### DROP
+De igual manera que con **CREATE** y **DROP** podemos eliminar tanto la base de datos como una tabla.
+
+Para eliminar la base de datos la sintaxis es:
+```sql
+DROP SCHEMA
+[IF EXISTS] <Nombre-de-la-base-de-datos>
+[CASCADE|RESTRICT];
+```
+* **CASCADE** borra la base de datos aunque tenga datos
+* **RESTRICT** protege la base datos si no está vacía.
+
+Para eliminar una tabla:
+```sql
+DROP TABLE
+[IF EXISTS] <Nombre-de-la-tabla>
+[CASCADE|RESTRICT];
+```
 
 

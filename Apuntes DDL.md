@@ -62,4 +62,35 @@ DROP TABLE
 [CASCADE|RESTRICT];
 ```
 
+## CONSTRAINTS
+Un constraint es una restriccion que permite limitar el tipo de dato que puede ingresarse en una tabla. 
 
+Se pueden utilizar con la instrucción **CREATE TABLE** y con **ALTER TABLE**
+
+Tipos de **constraints**:
+
+* **PRIMARY KEY**
+* **FOREIGN KEY**
+* **NOT NULL**
+* **UNIQUE**
+* **CHECK**
+
+### PRIMARY KEY
+
+La sintaxis es la siguiente:
+```sql
+[CONSTRAINT <nome-da-restricción>]
+PRIMARY KEY (<atributo>);
+```
+* **CONSTRAINT** es opcional y sirve para darle un nombre al constraint.
+* Dentro de **PRIMARY KEY** por mas de un atributo por tanto podemos poner mas de un atributo dentro del paréntesis separados por comas.
+* También se puede utilizar el constraint **PRIMARY KEY** colocándolo simplemente detrás del atributo que va a ser clave principal como en el siguiente ejemplo:
+```sql
+CREATE TABLE Sede (
+  Nome_Sede CHAR(10) PRIMARY KEY,
+  Campus CHAR(10),
+);
+```
+* Sin embargo esto **solo lo podemos hacer si la clave principal está formada por un solo atributo**, es decir si está formada por dos atributos tendremos que hacerlo de la forma anterior.
+
+## FOREIGN KEY

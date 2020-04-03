@@ -1,3 +1,18 @@
+- [Apuntes DDL](#Apuntes-DDL)
+  - [Sentencias](#SENTENCIAS)
+    - [CREATE](#CREATE)
+    - [ALTER](#ALTER)
+    - [DROP](#DROP)
+  - [CONSTRAINTS](#CONSTRAINTS)
+    - [PRIMARY KEY](#PRIMARY-KEY)
+    - [FOREIGN KEY](#FOREIGN-KEY)
+    - [NOT NULL](#NOT-NULL)
+    - [UNIQUE](#UNIQUE)
+    - [CHECK](#CHECK)
+    - [TIPOS DE DATOS](#TIPOS-DE-DATOS)
+    - [CREACIÓN DE DOMINIOS](#CREACIÓN-DE-DOMINIOS)
+    - [EJERCICIO EXPLICADO](#EJERCICIO-EXPLICADO)
+  
 # Apuntes DDL
 
 DDL es un sublenguaje de SQL que nos permite definir las estructuras que almacenaran los datos de la base de datos.

@@ -1,3 +1,7 @@
+- [Apuntes DML](#Apuntes-DML)
+  - [INSERT](#INSERT)
+  - [UPDATE](#UPDATE)
+  - [DELETE](#DELETE)
 # Apuntes DML
 DML es un sublenguaje de SQL que permite introducir datos y modificar datos en las tablas de las bases de datos.
 

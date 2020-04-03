@@ -200,7 +200,7 @@ Primero creamos el dominio y a continuación lo utilizamos poniendo el nombre de
 
 ### EJERCICIO EXPLICADO
 
-![EJERCICIO](img/1-proxectos-de-investigacion-relacional)
+![EJERCICIO](img/1-proxectos-de-investigacion-relacional.jpeg)
 
 ```sql
 CREATE DOMAIN Nome_Válido VARCHAR (30);

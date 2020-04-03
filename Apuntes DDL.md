@@ -185,3 +185,83 @@ CHECK sueldo >= (
 | INET  |
 
 ### CREACIÓN DE DOMINIOS
+De igual forma que podemos utilizar diferente tipos de datos también podemos crear nosotros otros tipos de datos de forma que si vamos a utilizar ese tipo de forma recurrente podremos declarar los tipos de datos más de forma más rápida y cómoda.
+
+EJEMPLO:
+```sql
+CREATE DOMAIN Nome_Válido VARCHAR (30);
+
+CREATE TABLE Sede (
+  Nome_Sede Nome_Válido PRIMARY KEY,
+  Campus Nome_Válido,
+);
+```
+Primero creamos el dominio y a continuación lo utilizamos poniendo el nombre del dominio en el tipo de dato a la hora de crear la tabla o modificarla.
+
+### EJERCICIO EXPLICADO
+
+![EJERCICIO](img/1-proxectos-de-investigacion-relacional)
+
+```sql
+CREATE DOMAIN Nome_Válido VARCHAR (30);
+CREATE DOMAIN Tipo_Código CHAR (5);
+CREATE DOMAIN Tipo_DNI CHAR (9);
+```
+Creamos los dominios que vamos a utilizar.
+```sql
+CREATE TABLE Sede (
+  Nome_Sede Nome_Válido PRIMARY KEY,
+  Campus Nome_Válido,
+);
+```
+Creamos la tabla Sede con dos atributos y un constraint de PRIMARY KEY en este caso como está formada por un solo atributo lo ponemos a continuación del tipo de dato.
+
+```sql
+CREATE TABLE Departamento (
+  Nome_Departamento Nome_Válido PRIMARY KEY,
+  Teléfono CHAR(9) NOT NULL,
+  Director Tipo-DNI,
+  -- FK Director
+);
+```
+Creamos la tabla Departamento, Nome_Departamento es la clave principal y Teléfono no puede ser nulo. Director es una clave ajena pero no podemos poner el constraint hasta que la tabla de la que viene este creada por eso hemos puesto un comentario para añadirla posteriormente con un ALTER TABLE.
+
+```sql
+CREATE TABLE UBICACIÓN (
+  Nome_Sede Nome_Válido,
+  Nome_Departamento Nome_Válido,
+  CONSTRAINT PK_Ubicación
+  PRIMARY KEY (Nome_Sede, Nome_Departamento),
+  CONSTRAINT FK_Sede
+  FOREIGN KEY (Nome_Sede)
+  REFERENCES Sede (Nome_Sede)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE,
+   CONSTRAINT FK_Departamento
+  FOREIGN KEY (Nome_Departamento)
+  REFERENCES Departamento (Nome_Departamento)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE
+);
+```
+En esta tabla observamos que la **PRIMARY KEY** la añadimos como un constraint mas abajo, esto se debe a que al estar compuesta por dos atributos no se puede hacer de la forma utilizada anteriormente.
+
+También tiene dos atributos que son claves ajenas y se modifican y eliminan ambas en cascada.
+
+```sql
+CREATE TABLE GRUPO (
+  Nome_Grupo Nome_Válido,
+  Nome_Departamento Nome_Válido,
+  Área Nome_Válido NOT NULL,
+  Líder Tipo_DNI,
+  CONSTRAINT PK_GRUPO
+  PRIMARY KEY (Nome_Grupo, Nome_Departamento),
+  -- FK Profesor
+  FOREIGN KEY (Nome_Departamento) REFERENCES Departamento
+  ON DELETE CASCADE
+  ON UPDATE CASCADE
+  
+);
+```
+Añadimos otra tabla y como podemos ver 
+

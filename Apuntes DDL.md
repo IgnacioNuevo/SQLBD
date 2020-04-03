@@ -263,5 +263,117 @@ CREATE TABLE GRUPO (
   
 );
 ```
-Añadimos otra tabla y como podemos ver 
+Añadimos otra tabla y como podemos ver también hemos dejado un comentario porque falta una clave ajena de una tabla que todavía no hemos creado.
 
+```sql
+CREATE TABLE Profesor (
+  DNI Tipo_DNI PRIMARY KEY,
+  Nome_Profesor Nome_Válido NOT NULL,
+  Titulación VARCHAR(20) NOT NULL,
+  Experiencia Integer,
+  N_Grupo Nome_Válido,
+  N_Departamento Nome_Válido,
+    FOREIGN KEY (N_Grupo, N_Departamento)
+    REFERENCES Grupo (Nome_Grupo, Nome_Departamento)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE
+);
+```
+La clave ajena se borra a nulos es decir si se borra la tabla grupo, entonces en esta tabla N_Grupo y N_Departamento tomarán los valores NULL.
+
+```sql
+CREATE TABLE Proxecto (
+  Código_Proxecto Tipo_Código PRIMARY KEY,
+  Nome_Proxecto Nome_Válido UNIQUE,
+  Orzamento MONEY NOT NULL,
+  Data_Inicio DATE NOT NULL,
+  Data_Fin DATE,
+  N_Gr Nome_Válido,
+  N_Dep Nome_Válido,
+  CONSTRAINT UQ_Proxecto
+  UNIQUE (Nome_Proxecto),
+  CONSTRAINT Check_Dates
+    CHECK (Data_Inicio < Data_Fin),
+  CONSTRAINT FK_Grupo_2
+    FOREIGN KEY (N_Gr,N_Dep)
+    REFERENCES Grupo
+    ON DELETE SET NULL
+    ON UPDATE CASCADE
+    );
+```
+En esta tabla utilizamos el constraint **UNIQUE** Y EL **CHECK** para que la fecha de inicio no sea posterior a la fecha de fin.
+
+```sql
+ALTER TABLE Departamento
+  ADD CONSTRAINT FK_Departamento_Profesor 
+    FOREIGN KEY(Director) REFERENCES Profesor (DNI)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE;
+```
+
+```sql
+ALTER TABLE Grupo
+  ADD CONSTRAINT FK_Grupo_Profesor
+    FOREIGN KEY (Líder)
+    REFERENCES Profesor (DNI)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE;
+```
+Con estos dos **ALTER** modificamos las tablas anteriormente creadas en las cuales faltaban claves ajenas ahora que las tablas de las que dependen ya están creadas.
+
+```sql
+CREATE TABLE Participa (
+DNI Tipo_DNI
+Código_Proxecto Tipo_Código
+Data_Inicio DATE, NOT NULL
+Data_Cese DATE,
+Dedicación INTEGER NOT NULL,
+PRIMARY KEY (DNI, Código_Proxecto),
+CONSTRAINT FK_Participa_Profesor
+    FOREIGN KEY DNI
+    REFERENCES Profesor (DNI)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE,
+CONSTRAINT FK_Participa_Proxecto
+    FOREIGN KEY Código_Proxecto
+    REFERENCES Proxecto (Código_Proxecto)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE,
+CONSTRAINT CK_Participa
+CHECK (Data_Inicio < Data_Cese),
+);
+```
+```sql
+CREATE TABLE Programa (
+  Nome_Programa_ Nome_Válido PRIMARY KEY);
+```
+
+```sql
+CREATE TABLE Financia (
+Nome_Programa Nome_Válido,
+Código_Proxecto Tipo_Código,
+Número_Programa Tipo_Código NOT NULL,
+Cantidade_Financiada MONEY NOT NULL,
+PRIMARY KEY (Nome_Programa, Código_Proxecto)
+);
+```
+
+```sql
+ALTER TABLE Financia
+ ADD CONSTRAINT FK_Financia_Programa
+ FOREIGN KEY (Nome_Programa) 
+ REFERENCES Programa
+ ON DELETE CASCADE
+ ON UPDATE CASCADE;
+);
+```
+
+```sql
+ALTER TABLE Financia
+ ADD CONSTRAINT FK_Financia_Proxecto
+ FOREIGN KEY (Código_Proxecto) 
+ REFERENCES Proxecto
+ ON DELETE CASCADE
+ ON UPDATE CASCADE;
+```
+En este caso añadimos las claves ajenas en un alter para ver que se puede hacer de diferentes formas.

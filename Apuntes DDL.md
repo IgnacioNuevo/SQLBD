@@ -153,3 +153,34 @@ CHECK sueldo >= (
 ```
 
 ### TIPOS DE DATOS
+| tipo de datos| Descripción                                  |
+| -------------| -------------------------------------------- |
+| INTEGER      | número entero                                |
+| DECIMAL      | número preciso                               |
+| REAL         | número no preciso                            |
+| -            | -                                            |
+| CHAR         | texto de longitud fija                       |
+| VARCHAR      | texto de longitud variable                   |
+| TEXT         | texto de longitud ilimitada                  |
+| -            | -                                            |
+| DATE         | día, mes, año                                |
+| TIME         | hora, minuto, segundo [zona horaria]         |
+| TIMESTAMP    | DATE+TIME                                    |
+| -            | -                                            |
+      
+| BOOLEAN      | Valores   |
+| -------------| --------- |
+| TRUE    | verdadero |
+| FALSE   | falso     |
+| NULL    | nulo      |
+
+| OTROS |
+| ----- |
+| MONEY |
+| UUID  |
+| JSON  |
+| XML   |
+| CIDR  |
+| INET  |
+
+### CREACIÓN DE DOMINIOS

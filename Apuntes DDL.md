@@ -102,7 +102,7 @@ REFERENCES <nombre-de-la-tabla-referenciada>[(atributos-referenciados)]
 [ON DELETE CASCADE|NO ACTION|SET NULL|SET DEFAULT]
 [ON CASCADE CASCADE|NO ACTION|SET NULL|SET DEFAULT];
 ```
-* Añadimos la FK a un atributo y con **REFERENCES** seleccionamos la tabla de la que viene la clave ajena, opcionalmente podemos indicar el nombre del atributo en la otra tabla en caso de llamarse de forma diferente, en caso de no indicarlo seleccionara la clave principal de la otra tabla.
+Añadimos la FK a un atributo y con **REFERENCES** seleccionamos la tabla de la que viene la clave ajena, opcionalmente podemos indicar el nombre del atributo en la otra tabla en caso de llamarse de forma diferente, en caso de no indicarlo seleccionara la clave principal de la otra tabla.
 * **ON DELETE** especifica que hacer cuando los datos principales son borrados.
 * **ON UPDATE** especifica que hacer cuando los datos principales son actualizados o modificados
 * **CASCADE** los datos se eliminan o actualizan si se modifican en la tabla de la que proviene.
@@ -128,13 +128,28 @@ Ejemplo:
 ```sql
 CREATE TABLE Departamento (
   Nome_Departamento CHAR(10) NOT NULL UNIQUE,
-  Teléfono CHAR(9) NOT NULL,
-;
+  Teléfono CHAR(9) NOT NULL;
 ```
 También se puede añadir en un CONSTRAINT:
 ```sql
 CONSTRAINT UQ UNIQUE (Nome_Departamento,Teléfono);
 ```
-* Cuando utilizamos el constraint de **PRIMARY KEY** este atributo es como si fuera **UNIQUE** y **NOT NULL**.
+* Cuando utilizamos el constraint de **PRIMARY KEY** este atributo es como si fuera **UNIQUE** + **NOT NULL**.
 
 ### CHECK
+Sirve para limitar el valor que pueden ser utilizados en una columna o en una tabla.
+
+Ejemplos:
+```sql
+CONSTRAINT CHECK-objetivo-positivo
+CHECK objetivo >0
+```
+```sql
+CONSTRAINT CHECK-SUELDO-MÁXIMO-DEPT-A
+CHECK sueldo >= (
+  SELECT sueldo
+  FROM empleado
+  WHERE dept ='A');
+```
+
+### TIPOS DE DATOS

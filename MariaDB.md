@@ -46,4 +46,18 @@ Separando con **;** podemos separar los diferentes **DESCRIBE** para ver la estr
 
 ## Ejercicio 2
 
+![10](img/Capturas/11ejercicio2.PNG)
+
+
+
+![10](img/Capturas/12.PNG)
+
+
+![10](img/Capturas/13.PNG)
+
+
+![10](img/Capturas/14.PNG)
+
+
+
 

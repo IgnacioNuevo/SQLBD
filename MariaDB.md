@@ -80,4 +80,5 @@ Para ver la estructura de una tabla podemos utilizar también **DESCRIBE** sin e
 Añadimos datos de prueba a una tabla para consultarlos después.
 
 ![10](img/Capturas/select.PNG)
+
 Hacemos un select y podemos comprobar los datos de la tabla.

@@ -3,7 +3,8 @@
 ## Ejercicio 1
 
 
-![1](img/Capturas/1.png)
+![1](img/Capturas/1.PNG)
+
 Una vez iniciamos MariaDB el primer paso será crear una base de datos como vemos en la captura, después utilizamos el comando use para modificar la base de datos.
 
 

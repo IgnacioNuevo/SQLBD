@@ -23,6 +23,5 @@ Podemos ver las tablas creadas con **show tables** y la estructura con **DESCRIB
 Separando con **;** podemos separar los diferentes **DESCRIBE** para ver la estructura de todas las columnas que enumeremos.
 
 ![](img\Capturas\10.png)
-
 ## Ejercicio 2
 
